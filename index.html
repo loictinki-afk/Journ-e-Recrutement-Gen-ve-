@@ -1,851 +1,291 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2566">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
-</head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="fr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Journée Recrutement en Suisse – StartSuisse&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Journée Recrutement en Suisse à Genève organisée par StartSuisse. 3 sessions de 20 places pour optimiser votre profil, rencontrer nos partenaires et décrocher un emploi en Suisse. Événement 100% gratuit." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--primary: #e30613;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--primary-dark: #b3050f;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #f5f5f7;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text: #111827;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #6b7280;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--white: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius-xl: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius-full: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top left, #ffffff, #eef2ff);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: inherit;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.page-wrapper {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 24px 16px 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* HEADER */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo-block {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.logo-circle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--primary);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand-text {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.03em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.tagline {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.badge {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(227, 6, 19, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--primary-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.06em;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.small-info {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: right;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.header-right {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: flex-end;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* HERO */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.96);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 26px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 24px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow-soft);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(148, 163, 184, 0.18);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-eyebrow {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #ecfeff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #a5f3fc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.09em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #0369a1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-eyebrow span {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #22c55e;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 26px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-title strong {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--primary);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-tags {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 5px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f3f4ff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #4b5563;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill.primary {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--primary);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: var(--primary-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-footer-left {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-footer-left strong {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-footer-right {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 9px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--primary), var(--primary-dark));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 12px 30px rgba(185, 28, 28, 0.5);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 16px 34px rgba(185, 28, 28, 0.55);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-ghost {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.9);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* HERO SIDE CARD */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-side {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #0f172a;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-card::before {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>content: "";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>inset: -30%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.45), transparent 60%);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.95;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-card-inner {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #cbd5f5;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #9ca3af;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.event-footer strong {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.stats-strip {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(15, 23, 42, 0.9);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 7px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(148, 163, 184, 0.6);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.stats-strip span {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.stats-dot {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #22c55e;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* MAIN GRID */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-block,</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-block {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.97);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-xl);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(148, 163, 184, 0.18);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.check-list {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.check-list li {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.check-icon {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #bbf7d0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #dcfce7;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-block p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content-block p strong {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* FORM / SESSIONS */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-block-header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form-badge {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.08em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--primary-dark);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(227, 6, 19, 0.08);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-list {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-note {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-buttons {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-btn {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f9fafb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 9px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: border-color 0.12s ease, background 0.12s ease, transform 0.08s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-btn:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: var(--primary);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fef2f2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-btn.disabled {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: not-allowed;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.55;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f3f4f6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-btn.disabled:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f3f4f6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 3px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-meta {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-badge {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4px 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-full);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #ecfdf3;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #166534;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #bbf7d0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-badge.waiting {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fef9c3;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: #facc15;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #854d0e;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.session-badge.full {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fee2e2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: #fecaca;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #b91c1c;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.note-text {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.submit-row {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.submit-row .btn-primary {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.guarantee {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* RESPONSIVE */</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-side {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>order: -1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-main {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 640px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.page-wrapper {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 18px 12px 32px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.header-right {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.small-info {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-title {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-footer {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-footer-right {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.btn-primary {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.btn-ghost {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.event-card {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 16px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="page-wrapper"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- HEADER --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo-circle"&gt;S&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="brand-text"&gt;StartSuisse&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tagline"&gt;Journée Recrutement · Genève&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="header-right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="badge"&gt;Événement 100% gratuit&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="small-info"&gt;Jeudi 18 décembre 2025 · 3 sessions · 60 places maximum&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- HERO --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-eyebrow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Journée spéciale recherche d'emploi en Suisse</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="hero-title"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Journée Recrutement en Suisse&lt;/strong&gt; – Genève</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="hero-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Rejoignez une journée exclusive animée par &lt;strong&gt;Loïc Tinki&lt;/strong&gt; (StartSuisse)</p>
-<p class="p1"><span class="Apple-converted-space">          </span>pour optimiser votre profil, rencontrer notre réseau de</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;18 agences de placement&lt;/strong&gt; et &lt;strong&gt;13 entreprises suisses&lt;/strong&gt;,</p>
-<p class="p1"><span class="Apple-converted-space">          </span>et augmenter vos chances de décrocher un emploi à Genève.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-tags"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;&lt;b&gt;18&lt;/b&gt; agences de placement partenaires&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill"&gt;&lt;b&gt;13&lt;/b&gt; entreprises en Suisse&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="pill primary"&gt;60 places uniquement · 3 sessions&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hero-footer-left"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;&lt;strong&gt;Jeudi 18 décembre 2025&lt;/strong&gt; – Genève&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;Choisissez votre créneau : &lt;strong&gt;10h30&lt;/strong&gt; · &lt;strong&gt;14h00&lt;/strong&gt; · &lt;strong&gt;17h00&lt;/strong&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hero-footer-right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#inscription"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="btn-primary"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>S'inscrire maintenant</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span&gt;→&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn-ghost" type="button"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Places limitées · 100% gratuit</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;aside class="hero-side"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="event-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="event-card-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="event-title"&gt;Votre passerelle vers l'emploi à Genève&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="event-meta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Intégrez notre réseau de recrutement et bénéficiez de conseils concrets pour décrocher un poste en Suisse</p>
-<p class="p1"><span class="Apple-converted-space">              </span>grâce à 18 agences de placement et 13 entreprises partenaires.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="event-footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Animé par &lt;strong&gt;Loïc Tinki&lt;/strong&gt;&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Société StartSuisse</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Participation &lt;strong&gt;gratuite&lt;/strong&gt;&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Inscription obligatoire</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="stats-strip"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;&lt;span class="stats-dot"&gt;&lt;/span&gt; Priorité sur les besoins de recrutement de nos partenaires&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Coaching CV &amp;amp; profil pour le marché suisse&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/aside&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- MAIN --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- CONTENU EXPLICATIF --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section class="content-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Pourquoi participer à cette journée&amp;nbsp;?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Cette journée est spécialement conçue pour les personnes qui souhaitent</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;travailler en Suisse, et plus particulièrement à Genève&lt;/strong&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="check-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="check-icon"&gt;✓&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;Comprendre les attentes du marché de l'emploi en Suisse (Genève et région).&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="check-icon"&gt;✓&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;Optimiser votre CV, votre profil LinkedIn et votre présentation pour les recruteurs suisses.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="check-icon"&gt;✓&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;Découvrir des opportunités concrètes via notre réseau de &lt;strong&gt;18 agences de placement&lt;/strong&gt; et &lt;strong&gt;13 entreprises&lt;/strong&gt;.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="check-icon"&gt;✓&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;Bénéficier de conseils personnalisés pour maximiser vos chances de décrocher le job de vos rêves.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>📌 &lt;strong&gt;Date :&lt;/strong&gt; Jeudi 18 décembre 2025&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>📍 &lt;strong&gt;Lieu :&lt;/strong&gt; Genève (adresse communiquée après inscription)&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>🕒 &lt;strong&gt;Sessions :&lt;/strong&gt; 10h30 · 14h00 · 17h00 (20 places par créneau)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- BLOC INSCRIPTION --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section class="form-block" id="inscription"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="form-block-header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="form-badge"&gt;Inscription&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2 class="section-title"&gt;Réservez votre place&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="section-subtitle"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Sélectionnez le créneau qui vous convient. L'inscription se finalise directement sur Calendly.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="session-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="session-note"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>📌 &lt;strong&gt;Règle d'inscription :&lt;/strong&gt; les créneaux sont ouverts &lt;strong&gt;dans l'ordre&lt;/strong&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Vous pouvez vous inscrire sur la session suivante uniquement lorsque la précédente est complète.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="session-buttons"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- SESSION 1 – OUVERTE --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">              </span>type="button"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>class="session-btn"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>data-session="session1"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>onclick="openCalendly('session1')"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="session-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="session-title"&gt;Session 1 – Matin&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="session-meta"&gt;Jeudi 18 décembre · 10h30 – 12h00 · 20 places&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="session-badge"&gt;Session ouverte&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- SESSION 2 – VERROUILLÉE VISUELLEMENT --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">              </span>type="button"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>class="session-btn disabled"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>data-session="session2"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>data-locked="true"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>onclick="openCalendly('session2')"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="session-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="session-title"&gt;Session 2 – Après-midi&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="session-meta"&gt;Jeudi 18 décembre · 14h00 – 15h30 · 20 places&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="session-badge waiting"&gt;Ouvrira quand la Session 1 sera complète&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- SESSION 3 – VERROUILLÉE VISUELLEMENT --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">              </span>type="button"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>class="session-btn disabled"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>data-session="session3"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>data-locked="true"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>onclick="openCalendly('session3')"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="session-main"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="session-title"&gt;Session 3 – Fin de journée&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="session-meta"&gt;Jeudi 18 décembre · 17h00 – 18h30 · 20 places&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="session-badge waiting"&gt;Ouvrira quand la Session 2 sera complète&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="note-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>ℹ️ En pratique, dès que la Session 1 est pleine dans Calendly, vous pourrez modifier cette page</p>
-<p class="p1"><span class="Apple-converted-space">            </span>et retirer le verrou (ou simplement partager directement le lien des autres créneaux).</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="note-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Liens directs Calendly utilisés :</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;br /&gt;– 10h30 : &lt;code&gt;https://calendly.com/startsuisse-info/evenement-recrutement-10h30&lt;/code&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;br /&gt;– 14h : &lt;code&gt;https://calendly.com/startsuisse-info/evenement-recrutement-geneve-10h30-clone&lt;/code&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;br /&gt;– 17h : &lt;code&gt;https://calendly.com/startsuisse-info/evenement-recrutement-geneve-18-dec-14h00-20-clone&lt;/code&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="submit-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="btn-primary" type="button" onclick="alert('Sélectionnez votre créneau ci-dessus. L’inscription se finalise sur Calendly dans un nouvel onglet.')"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Finaliser mon inscription →</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="guarantee"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Vos données sont traitées en toute confidentialité. Vous serez recontacté uniquement dans le cadre de cette journée</p>
-<p class="p1"><span class="Apple-converted-space">            </span>et des opportunités d'emploi associées.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>© StartSuisse – Journée Recrutement en Suisse · Genève · 18 décembre 2025 — Organisée par Loïc Tinki</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SCRIPT REDIRECTION CALENDLY --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function openCalendly(sessionId) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>// On récupère le bouton correspondant</p>
-<p class="p1"><span class="Apple-converted-space">      </span>var btn = document.querySelector('[data-session="' + sessionId + '"]');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (btn &amp;&amp; btn.dataset.locked === "true") {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert("Ce créneau sera ouvert dès que le créneau précédent sera complet. Merci de choisir un créneau déjà ouvert.");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>// Liens Calendly définitifs</p>
-<p class="p1"><span class="Apple-converted-space">      </span>var urls = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>session1: "https://calendly.com/startsuisse-info/evenement-recrutement-10h30",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>session2: "https://calendly.com/startsuisse-info/evenement-recrutement-geneve-10h30-clone",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>session3: "https://calendly.com/startsuisse-info/evenement-recrutement-geneve-18-dec-14h00-20-clone"</p>
-<p class="p1"><span class="Apple-converted-space">      </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>var url = urls[sessionId];</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (url) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>window.open(url, "_blank");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert("Lien Calendly non configuré pour cette session.");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="page-wrapper">
+  <!-- HEADER -->
+  <header>
+    <div class="logo-block">
+      <div class="logo-circle">S</div>
+      <div class="brand-lines">
+        <div class="brand-name">STARTSUISSE</div>
+        <div class="brand-tag">Journée Recrutement · Genève · Suisse 🇨🇭</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="badge-free">
+        <span class="badge-dot"></span>
+        ÉVÉNEMENT 100% GRATUIT
+      </div>
+      <div class="header-meta">
+        Jeudi 18 décembre 2025 · 3 sessions · 60 participants maximum
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-main">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-flag">
+            <div class="swiss-flag"></div>
+          </div>
+          <span class="hero-eyebrow-label">Journée exclusive de recrutement en Suisse</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="highlight">Journée Recrutement</span> en Suisse – <span class="red">Genève</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Une journée unique animée par <strong>Loïc Tinki</strong> et StartSuisse pour
+          connecter des candidats motivés à un réseau de
+          <strong>18 agences de placement</strong> et <strong>13 entreprises suisses partenaires</strong>.
+          Objectif : vous aider à décrocher votre prochain emploi à Genève.
+        </p>
+
+        <div class="hero-tags">
+          <div class="pill">
+            <strong>18</strong> agences de placement
+          </div>
+          <div class="pill">
+            <strong>13</strong> entreprises suisses
+          </div>
+          <div class="pill primary">
+            <strong>3 sessions · 60 places</strong>
+          </div>
+        </div>
+
+        <div class="hero-footer">
+          <div class="hero-footer-left">
+            <div><strong>Jeudi 18 décembre 2025</strong> · Genève (adresse envoyée après inscription)</div>
+            <div>Choisissez votre session : <strong>10h30</strong> · <strong>14h00</strong> · <strong>17h00</strong></div>
+          </div>
+          <div class="hero-footer-right">
+            <a href="#inscription">
+              <button class="btn-primary" type="button">
+                S'inscrire à la journée
+                <span class="arrow">→</span>
+              </button>
+            </a>
+            <button class="btn-subtle" type="button">
+              <span class="dot"></span>
+              Accès prioritaire au réseau recruteur
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO SIDE: RÉSEAU + VISUELS -->
+    <aside class="hero-side">
+      <div class="network-card">
+        <div class="network-inner">
+          <div class="network-top">
+            <div class="network-title">Réseau recruteurs & entreprises</div>
+            <div class="network-badge">
+              🔗 Connecté à Genève
+            </div>
+          </div>
+
+          <div class="network-grid">
+            <div class="network-pill">
+              <strong>18</strong>
+              <small>Agences de placement</small>
+            </div>
+            <div class="network-pill">
+              <strong>13</strong>
+              <small>Entreprises suisses</small>
+            </div>
+            <div class="network-pill">
+              <strong>60</strong>
+              <small>Participants max / journée</small>
+            </div>
+          </div>
+
+          <div class="network-footer">
+            <div class="network-avatars">
+              <div class="avatar-circle">LT</div>
+              <div style="font-size:11px;">Animé par <strong>Loïc Tinki</strong></div>
+            </div>
+            <div>Focus : Genève & région · Emploi & intégration</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VISUEL RÉSEAU + CV -->
+      <div class="visual-row">
+        <div class="network-visual">
+          <div class="nv-title">Votre réseau en une journée</div>
+          <div class="nv-nodes">
+            <div class="nv-node nv-main">Vous</div>
+            <div class="nv-node nv-agency">Agences</div>
+            <div class="nv-node nv-company">Entreprises</div>
+            <div class="nv-node nv-coach">Coaching</div>
+          </div>
+        </div>
+
+        <div class="cv-mini">
+          <div class="cv-header">Profil candidat</div>
+          <div class="cv-body">
+            <div class="cv-avatar"></div>
+            <div class="cv-lines">
+              <div class="cv-line cv-line-strong"></div>
+              <div class="cv-line"></div>
+              <div class="cv-line short"></div>
+            </div>
+          </div>
+          <div class="cv-footer">CV & profil optimisés pour le marché suisse</div>
+        </div>
+      </div>
+
+      <div class="stats-strip">
+        <span><span class="stats-dot"></span> Coaching CV, profil & posture pour le marché suisse</span>
+        <span>Positionnement prioritaire sur les recrutements de nos partenaires</span>
+      </div>
+    </aside>
+  </section>
+
+  <!-- MAIN -->
+  <main>
+    <!-- CONTENU EXPLICATIF -->
+    <section class="content-block">
+      <h2 class="section-title">Une journée pour accélérer votre projet d'emploi en Suisse</h2>
+      <p class="section-subtitle">
+        Cette journée s'adresse aux personnes qui souhaitent <strong>travailler en Suisse</strong> (et en particulier à Genève) :
+        en recherche d'emploi, en reconversion, déjà en poste mais à l'écoute, ou jeunes diplômés motivés.
+      </p>
+
+      <ul class="check-list">
+        <li>
+          <div class="check-icon">✓</div>
+          <div>Comprendre les attentes réelles des recruteurs en Suisse (Genève, Vaud, région lémanique).</div>
+        </li>
+        <li>
+          <div class="check-icon">✓</div>
+          <div>Optimiser votre CV, votre profil LinkedIn et votre pitch pour le contexte suisse.</div>
+        </li>
+        <li>
+          <div class="check-icon">✓</div>
+          <div>Découvrir des opportunités concrètes via notre réseau de <strong>18 agences de placement</strong> et <strong>13 entreprises partenaires</strong>.</div>
+        </li>
+        <li>
+          <div class="check-icon">✓</div>
+          <div>Bénéficier de conseils personnalisés pour maximiser vos chances de décrocher le job de vos rêves.</div>
+        </li>
+      </ul>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">Date</div>
+          <div class="info-value">Jeudi 18 décembre 2025</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Lieu</div>
+          <div class="info-value">Genève (adresse envoyée après inscription)</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Sessions</div>
+          <div class="info-value">10h30 · 14h00 · 17h00</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Capacité</div>
+          <div class="info-value">60 participants (20 par session)</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Important :</strong> la journée est 100% gratuite, mais les places sont limitées à 60 personnes.
+        L'inscription est obligatoire et la sélection se fait dans l'ordre d'arrivée des inscriptions.
+      </div>
+    </section>
+
+    <!-- INSCRIPTION / SESSIONS -->
+    <section class="form-block" id="inscription">
+      <div class="form-block-header">
+        <span class="form-badge">Inscription à la journée</span>
+        <h2 class="section-title">Choisissez votre session et réservez votre place</h2>
+        <p class="section-subtitle">
+          Les 3 créneaux sont ouverts. Sélectionnez simplement l'horaire qui vous convient, l'inscription se fait ensuite sur Calendly.
+        </p>
+      </div>
+
+      <div class="session-list">
+        <div class="session-buttons">
+          <!-- SESSION 1 – OUVERTE -->
+          <button
+            type="button"
+            class="session-btn"
+            data-session="session1"
+            onclick="openCalendly('session1')"
+          >
+            <div class="session-main">
+              <div class="session-title">Session 1 – Matin</div>
+              <div class="session-meta">Jeudi 18 décembre · 10h30 – 12h00 · 20 places</div>
+            </div>
+            <span class="session-badge">Session ouverte</span>
+          </button>
+
+          <!-- SESSION 2 – OUVERTE -->
+          <button
+            type="button"
+            class="session-btn"
+            data-session="session2"
+            onclick="openCalendly('session2')"
+          >
+            <div class="session-main">
+              <div class="session-title">Session 2 – Après-midi</div>
+              <div class="session-meta">Jeudi 18 décembre · 14h00 – 15h30 · 20 places</div>
+            </div>
+            <span class="session-badge">Session ouverte</span>
+          </button>
+
+          <!-- SESSION 3 – OUVERTE -->
+          <button
+            type="button"
+            class="session-btn"
+            data-session="session3"
+            onclick="openCalendly('session3')"
+          >
+            <div class="session-main">
+              <div class="session-title">Session 3 – Fin de journée</div>
+              <div class="session-meta">Jeudi 18 décembre · 17h00 – 18h30 · 20 places</div>
+            </div>
+            <span class="session-badge">Session ouverte</span>
+          </button>
+        </div>
+
+        <p class="note-text">
+          Chaque session est limitée à 20 participants afin de garantir la qualité des échanges et du coaching.
+        </p>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn-primary" type="button" onclick="alert('Choisissez simplement votre session ci-dessus. L’inscription se fait ensuite sur Calendly dans un nouvel onglet.')">
+          Finaliser mon inscription →
+        </button>
+        <div class="guarantee">
+          Vos informations resteront confidentielles et seront utilisées uniquement dans le cadre de cette journée
+          et des opportunités de recrutement de nos partenaires.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © StartSuisse – Journée Recrutement en Suisse · Genève · 18 décembre 2025 — Organisée par Loïc Tinki
+  </footer>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
 </html>
